@@ -1,0 +1,56 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 20
+C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 20
+Not Found: /prefix
+"GET /prefix HTTP/1.1" 404 2419
+Not Found: /prefix/
+"GET /prefix/ HTTP/1.1" 404 2422
+"GET /about/ HTTP/1.1" 200 27
+C:\Users\malex\GB\DJANGO\djangoProject\ad\ad\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Index page accessed
+"GET / HTTP/1.1" 200 20
+Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py", line 15, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+"GET /about/ HTTP/1.1" 200 27
+C:\Users\malex\GB\DJANGO\djangoProject\ad\ad\settings.py changed, reloading.
+INFO 2024-03-24 21:00:51,929 autoreload 10108 18152Watching for file changes with StatReloader
+INFO 2024-03-24 21:00:58,185 views 10108 13084Index page accessed
+INFO 2024-03-24 21:00:58,186 basehttp 10108 13084"GET / HTTP/1.1" 200 20
+ERROR 2024-03-24 21:01:00,117 views 10108 13084Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py", line 15, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+INFO 2024-03-24 21:01:00,118 basehttp 10108 13084"GET /about/ HTTP/1.1" 200 27
+INFO 2024-03-24 21:27:54,339 autoreload 10108 18152C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:27:54,751 autoreload 17832 7048Watching for file changes with StatReloader
+INFO 2024-03-24 21:28:53,620 autoreload 17832 7048C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:28:54,030 autoreload 13716 11332Watching for file changes with StatReloader
+INFO 2024-03-24 21:29:08,474 autoreload 11940 7340Watching for file changes with StatReloader
+INFO 2024-03-24 21:29:52,710 autoreload 11940 7340C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:29:53,104 autoreload 10448 10268Watching for file changes with StatReloader
+DEBUG 2024-03-24 21:29:57,558 views 10448 8668About page accessed
+INFO 2024-03-24 21:29:57,558 basehttp 10448 8668"GET /about/ HTTP/1.1" 200 50
+INFO 2024-03-24 21:31:00,000 views 10448 8668Index page accessed
+INFO 2024-03-24 21:31:00,000 basehttp 10448 8668"GET / HTTP/1.1" 200 32
+INFO 2024-03-24 21:32:47,332 autoreload 10448 10268C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:32:47,727 autoreload 15956 4008Watching for file changes with StatReloader
+INFO 2024-03-24 21:45:12,798 autoreload 15956 4008C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:45:13,212 autoreload 18176 4044Watching for file changes with StatReloader
+INFO 2024-03-24 21:47:18,770 autoreload 18176 4044C:\Users\malex\GB\DJANGO\djangoProject\ad\myapp\views.py changed, reloading.
+INFO 2024-03-24 21:47:19,171 autoreload 16240 17244Watching for file changes with StatReloader
+INFO 2024-03-24 21:47:19,964 views 16240 2020посещение страницы index в: 2024-03-24 21:47:19.964347
+INFO 2024-03-24 21:47:19,965 basehttp 16240 2020"GET / HTTP/1.1" 200 1118
+INFO 2024-03-24 21:47:25,688 views 16240 2020посещение страницы about в: 2024-03-24 21:47:25.688623
+INFO 2024-03-24 21:47:25,688 basehttp 16240 2020"GET /about/ HTTP/1.1" 200 1505
