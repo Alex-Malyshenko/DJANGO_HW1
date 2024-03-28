@@ -1,9 +1,7 @@
 from datetime import datetime
-
-from django.shortcuts import render
 import logging
 from django.http import HttpResponse
-# Create your views here.
+from djangoProject.ad.myapp.models import Client
 
 logger = logging.getLogger(__name__)
 
@@ -84,4 +82,41 @@ def about(request):
     </html>
     """
     logger.info(f'посещение страницы about в: {datetime.now()}')
+    return HttpResponse(html)
+
+def clients_list(request):
+    """Список клиентов."""
+    clients = Client.objects.all()
+
+    html = """
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Обо мне</title>
+        </head>
+        <body>
+            <header>
+                <a href='/'>Home</a>
+                <a href='/about/'>About</a>
+                <a href='/clients'>Clients</a>
+            <h1>Clients list</h2>
+            <table>
+            <tr>
+                <td>Name</td>
+                <td>E-mail</td>
+                <td>Phone</td>
+                <td>Address</td>
+            </tr>
+            """
+    for client in clients:
+        html += """<tr>
+                 f<td>{client.client_name}</td>
+                 f<td>{client.email}</td>
+                 f<td>{client.phone}</td>
+                 f<td>{client.address}</td>
+                 </tr>"""
+    html += """</table>"""
+    logger.info(f'посещение страницы Clients в: {datetime.now()}')
     return HttpResponse(html)
