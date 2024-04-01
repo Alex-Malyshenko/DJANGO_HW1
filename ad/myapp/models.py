@@ -4,6 +4,7 @@ from django.core.validators import MinValueValidator
 
 class Client(models.Model):
     """Клиент интернет магазина."""
+    objects = None
     client_name = models.CharField(max_length=100, null=False)
     email = models.EmailField()
     password = models.CharField(max_length=100, null=False)
@@ -52,3 +53,13 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.pk} - {self.order_date}'
+
+
+class OrderProducts(models.Model):
+    """Количественный состав заказа по продуктам."""
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    product_count = models.IntegerField(default=1, validators=[MinValueValidator(1)])
+
+    def __str__(self):
+        return f'{self.order.primary_key}. {self.product.name} - {self.product_count}'
